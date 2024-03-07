@@ -2,10 +2,17 @@ import React from "react";
 import Profile from "../../components/Profile/Profile.tsx";
 import Menu from "../../components/Menu/Menu.jsx";
 import MainTable from "../../components/MainTable/MainTable.jsx";
+import { useNavigate } from "react-router-dom";
 
 function Page1() {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/details");
+  };
+
   return (
-    <div className="flex flex-row justify-center w-full ">
+    <div className="flex flex-row justify-center w-full " onClick={handleClick}>
       <div className="flex flex-col items-center justify-start w-[100vw] h-auto pt-auto gap-5 ">
         {" "}
         <Profile />

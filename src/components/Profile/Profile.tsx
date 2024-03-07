@@ -6,7 +6,7 @@ import profilePic from './img/profilePic.jpeg';
 
 function Profile() {
   return (
-    <div className="flex flex-row justify-center w-[25%] top-[3%] right-0 left-0 m-auto relative ">
+    <div className="flex flex-row justify-center w-[34%] top-[3%] right-0 left-0 m-auto relative ">
       <div className="flex flex-row justify-between items-center w-full">
         <CiSquareInfo className="h-[32px] w-[32px]" />
         <IoIosNotificationsOutline  className="h-[32px] w-[32px]" />
