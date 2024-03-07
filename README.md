@@ -1,3 +1,8 @@
+## Live Demo
+
+Check out the live demo [here](https://sebastianthomas94.github.io/Event-Management/).
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
