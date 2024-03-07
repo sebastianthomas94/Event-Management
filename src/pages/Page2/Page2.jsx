@@ -5,14 +5,9 @@ import DetailsMain from "../../components/DetailsMain/DetailsMain.jsx";
 import { useNavigate } from "react-router-dom";
 
 function Page2() {
-  const navigate = useNavigate();
-
-  const handleClick = () => {
-    navigate("/");
-  };
 
   return (
-    <div className="flex flex-row justify-center w-full " onClick={handleClick}>
+    <div className="flex flex-row justify-center w-full ">
       <div className="flex flex-col items-center justify-start w-[100vw] h-auto pt-auto gap-5 ">
         {" "}
         <Profile />

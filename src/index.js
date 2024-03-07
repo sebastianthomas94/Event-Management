@@ -7,22 +7,27 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Page1 from "./pages/Page1/Page1.jsx";
 import Page2 from "./pages/Page2/Page2.jsx";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <App />,
+      children: [
+        {
+          path: "/",
+          element: <Page1 />,
+        },
+        {
+          path: "/details",
+          element: <Page2 />,
+        },
+      ],
+    },
+  ],
   {
-    path: "/",
-    element: <App />,
-    children: [
-      {
-        path: "/",
-        element: <Page1 />,
-      },
-      {
-        path: "/details",
-        element: <Page2 />,
-      },
-    ],
-  },
-]);
+    basename: "/Event-Management",
+  }
+);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Tabs from "../Tabs";
 import Meeting from "../Meeting/Meeting";
 import Positions from "../Positions/Positions";
+import { useNavigate } from "react-router-dom";
 
 const dropDownOptions = [
   { label: "Option1", value: "option1" },
@@ -11,6 +12,14 @@ const dropDownOptions = [
 
 
 function DetailsMain() {
+
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/");
+  };
+
+
   return (
     <div className="flex flex-col px-8 py-3 justify-start w-[81%] border-purple-500 border-2 border-solid shadow-xs rounded-[16px]">
       {/* heading and search bar */}
@@ -88,7 +97,7 @@ function DetailsMain() {
         {/* positions block */}
         <Positions />
       </div>
-      <button className=" mx-auto min-w-[212px] m-5 w-fit rounded-[12px] py-5 text-lg shadow-md bg-[#d85ad8]">
+      <button className=" mx-auto min-w-[212px] m-5 w-fit rounded-[12px] py-5 text-lg shadow-md bg-[#d85ad8]"  onClick={handleClick}>
                         Save Edits
         </button>
     </div>
